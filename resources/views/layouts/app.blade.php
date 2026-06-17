@@ -189,35 +189,6 @@ body{
 
     <div class="container-fluid mt-4">
 
-        @if(session('success'))
-
-            <div class="alert alert-success alert-dismissible fade show shadow-sm mb-3">
-
-                <strong>✓ Berhasil!</strong>
-                {{ session('success') }}
-
-                <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="alert">
-                </button>
-
-            </div>
-
-            <script>
-                setTimeout(function(){
-
-                    let alert = document.querySelector('.alert');
-
-                    if(alert){
-                        alert.remove();
-                    }
-
-                },3000);
-            </script>
-
-        @endif
-
         @yield('content')
 
     </div>
